@@ -1,0 +1,11 @@
+>>> messier = np.genfromtxt('messier.dat', delimiter=',', dtype=float)
+>>> image = plt.imshow(np.log10(messier + 0.01))
+>>> image.set_cmap('gray')
+>>> plt.colorbar()
+>>> plt.show()
+
+>>> spec = np.genfromtxt('spec.dat', delimiter=',', skip_header=True, unpack=True)
+>>> plt.plot(spec[0], spec[1], 'r-', lineweight=0.5)
+>>> plt.errorbar(spec[0], spec[1], yerr=spec[2], 'k.')
+>>> plt.ylabel('Flux'), plt.xlabel('Wavelength')
+>>> plt.show()
