@@ -1,0 +1,14 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module fatF.so ! in 
+    interface  ! in :fatF.so
+        subroutine fatf(fat,n) ! in :fatF.so:fatorial.f90
+            integer :: fat
+            integer :: n
+        end subroutine fatf
+    end interface 
+end python module fatF.so
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/
